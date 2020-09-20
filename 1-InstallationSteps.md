@@ -99,11 +99,12 @@ az account set -s [your_subscription_id]
 
 ```bash
 az group create --name [your_resource_group] --location [region]
+ex : az group create --name kubernetes-dapr-rg --location westus
 ```
 
 4. Create an Azure Kubernetes Service cluster
 
-Use 1.13.x or newer version of Kubernetes with `--kubernetes-version`
+Use 1.17.9 or newer version of Kubernetes with `--kubernetes-version`
 
 ```bash
 az aks create --resource-group [your_resource_group] --name [your_aks_cluster_name] --node-count 2 --kubernetes-version 1.17.9 --enable-addons http_application_routing --enable-rbac --generate-ssh-keys
@@ -117,9 +118,18 @@ Get the access credentials for the Azure Kubernetes cluster
 
 ```bash
 az aks get-credentials -n [your_aks_cluster_name] -g [your_resource_group]
+ex : az aks get-credentials -n dapr-aks-cluster -g kubernetes-dapr-rg
 ```
 
 <img src="images/4-GetContextOfAKS.PNG" />
+
+5. Finally, also Create Azure Container Registry
+
+```cmd
+az acr create --resource-group kubernetes-dapr-rg --name daprk8sreg --sku Basic
+```
+
+we will use this container registry later
 
 <hr/>
 
@@ -144,25 +154,30 @@ for me it already exists as shown below :
 
 ## Install Dapr to Kubernetes **(AKS)**
 
-1. Make sure Helm 3 is installed on your machine
+## Option A (Using DAPR CLI)
+## Option B (Using HELM)
 
-2. Add Azure Container Registry as a Helm repo
+**Option A** Using the Dapr CLI
 
-```bash
-helm repo add dapr https://daprio.azurecr.io/helm/v1/repo
-helm repo update
+1. Install Dapr to Kubernetes
+
+```cmd
+dapr init -k
 ```
 
-3. Create `dapr-system` namespace on your kubernetes cluster
+2. Check Status of
 
-```bash
-kubectl create namespace dapr-system
+```cmd
+dapr status -k
 ```
 
-4. Install the Dapr chart on your cluster in the `dapr-system` namespace.
+As shown here
+<img src="images/7-Dapr-Installation-In-K8s.PNG" />
 
-```bash
-helm install dapr dapr/dapr --namespace dapr-system
+3. Uninstall like this **(if required)**
+
+```cmd
+dapr uninstall --kubernetes
 ```
 
 ### Verify installation
@@ -171,21 +186,20 @@ Once the chart installation is complete, verify the dapr-operator, dapr-placemen
 
 ```bash
 $ kubectl get pods -n dapr-system -w
-
-NAME                                     READY     STATUS    RESTARTS   AGE
-dapr-operator-7bd6cbf5bf-xglsr           1/1       Running   0          40s
-dapr-placement-7f8f76778f-6vhl2          1/1       Running   0          40s
-dapr-sidecar-injector-8555576b6f-29cqm   1/1       Running   0          40s
-dapr-sentry-9435776c7f-8f7yd             1/1       Running   0          40s
 ```
+
+<img src="images/8-Get-Dapr-System-PODS.PNG" />
 
 ### Sidecar annotations
 
 To see all the supported annotations for the Dapr sidecar on Kubernetes, visit [this](../howto/configure-k8s/README.md) how to guide.
 
-#### Uninstall Dapr on Kubernetes
+#### Uninstall Dapr on Kubernetes **(Only if required)**
 
 Helm 3
 
 ```bash
 helm uninstall dapr -n dapr-system
+```
+
+<hr/>

@@ -19,12 +19,17 @@ powershell -Command "iwr -useb https://raw.githubusercontent.com/dapr/cli/master
 output -
 <img src="images/1-InstallingDaprOnWindows.PNG "/>
 
+<hr/>
+
 ## Installing DAPR CLI on *Linux*
 Install the latest linux Dapr CLI to /usr/local/bin
 
 ```cmd
 wget -q https://raw.githubusercontent.com/dapr/cli/master/install/install.sh -O - | /bin/bash
 ```
+
+<hr/>
+
 ## Installing DAPR CLI on *MacOS*
 
 Install the latest darwin Dapr CLI to /usr/local/bin
@@ -38,6 +43,7 @@ Or install via Homebrew
 ```cmd
 brew install dapr/tap/dapr-cli
 ```
+<hr/>
 
 ## Installing Dapr in self hosted mode
 **Initialize Dapr using the CLI**
@@ -52,6 +58,7 @@ To see that Dapr has been installed successfully, from a command prompt run the 
 
 <img src="images/3-Docker-Init-For-DAPR.png" />
 
+<hr/>
 
 ## On Kubernetes Clusters
 

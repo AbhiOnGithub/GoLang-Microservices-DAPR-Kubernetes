@@ -1,4 +1,6 @@
-# Writing Simple GoLang App/Program using DAPR (**D**istributed **AP**plication **R**untime)
+# Writing Simple GoLang App/Program using DAPR
+
+## ( **D**istributed **AP**plication **R**untime )
 
 ## Basic DAPR Terminology
 

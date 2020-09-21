@@ -21,7 +21,7 @@ Repository to learn about writing Microservices in GoLang & DotNET and running t
 [Link -> 1-InstallationSteps.md](https://github.com/AbhiOnGithub/GoLang-Microservices-DAPR-Kubernetes/blob/main/1-InstallationSteps.md)
 
 2) Writing a Simple **ASP.NET** Web App and run it on Kubernetes (AKS) using DAPR
-[Link -> 2-ASPnetApponDAPR.md](https://github.com/AbhiOnGithub/GoLang-Microservices-DAPR-Kubernetes/blob/main/2-ASPnetApponDAPR.md)
+[Link -> 2-ASPnetAppOnDAPR.md](https://github.com/AbhiOnGithub/GoLang-Microservices-DAPR-Kubernetes/blob/main/2-ASPnetAppOnDAPR.md)
 
 3) Writing a Simple **GoLang** Web App and run it on Kubernetes (AKS) using DAPR
 [Link -> 3-GoLangAppOnDAPR.md](https://github.com/AbhiOnGithub/GoLang-Microservices-DAPR-Kubernetes/blob/main/3-GoLangAppOnDAPR.md)

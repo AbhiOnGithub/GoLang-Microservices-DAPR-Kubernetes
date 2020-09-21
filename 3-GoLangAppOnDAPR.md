@@ -22,10 +22,17 @@ There are few more DAPR terms and concepts which we will understand in more adva
 
 ### Lets start Hands-On
 
+You can use DAPR in **self hosted mode** or on your **Kubernetes cluster**,
+In this exercise we will focus mainly on Self Hosted Mode
+
 1) Uninstall DAPR if you want fresh start (although not mandatory)
 
 ```cmd
 dapr uninstall
+```
+or if you want to uninstall from your Kubernetes cluster
+```cmd
+dapr uninstall -k
 ```
 
 <img src="images/GoLangDapr/1-UninstallDapr.PNG" />
@@ -37,12 +44,30 @@ dapr uninstall
 ```cmd
 dapr init
 ```
+or if you want to install it to your kubernetes cluster
+
+```cmd
+dapr init -k
+```
 
 <img src="images/GoLangDapr/2-DaprInit.PNG" />
 
 <hr/>
 
-3) Get List of Containers running by DAPR
+3) Check the status of Dapr
+
+```cmd
+dapr status
+```
+
+or if you want to see the status of DAPR on your K8s cluster
+
+```cmd
+dapr init -k
+```
+<img src="images/GoLangDapr/3.5-CheckDAPRStatusOnK8s.PNG" />
+
+4) Get List of Containers running by DAPR
 
 ```cmd
 docker ps
@@ -52,7 +77,7 @@ docker ps
 
 <hr/>
 
-4) Write a Simple GoLang Program to do following
+5) Write a Simple GoLang Program to do following
    * a) Welcome Message at path  /
    * b) Greeting Message at path /greeting
    * c) Greeting by name at path /greetme?name=[YourName]
@@ -117,7 +142,7 @@ You can also refer the source code inside **src/GoLangSamples/BasicSample** fold
 
 <hr/>
 
-5) Now from the same location where main.go is present , run following command
+6) Now from the same location where main.go is present , run following command
 
 ```cmd
 dapr run --app-id dapr-greetings --app-port 8080 --port 8089 go run main.go
@@ -128,7 +153,7 @@ You will see the output as shown below (notice the highlighted command) inside V
 
 <hr/>
 
-6) Open your favorite browser and try the three endpoints below
+7) Open your favorite browser and try the three endpoints below
    * a) Welcome Message at path  **/**
 
 	<img src="images/GoLangDapr/5-RootPathWelcome.PNG" style="margin-bottom: 25px"/>
@@ -143,7 +168,7 @@ You will see the output as shown below (notice the highlighted command) inside V
 
 <hr/>
 
-7) Finally you can see list of DAPR apps running
+8) Finally you can see list of DAPR apps running
 
 ```cmd
 dapr list

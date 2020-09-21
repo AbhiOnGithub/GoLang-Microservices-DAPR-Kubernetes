@@ -1,9 +1,4 @@
-// ------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT License.
-// ------------------------------------------------------------
-
-namespace Accounting
+namespace Accounting.Models
 {
     using System.ComponentModel.DataAnnotations;
 

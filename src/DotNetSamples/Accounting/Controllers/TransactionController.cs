@@ -1,16 +1,12 @@
-﻿// ------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT License.
-// ------------------------------------------------------------
+﻿using System;
+using System.Threading.Tasks;
+using Accounting.Models;
+using Dapr;
+using Dapr.Client;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Accounting.Controllers
 {
-    using System;
-    using System.Threading.Tasks;
-    using Dapr;
-    using Dapr.Client;
-    using Microsoft.AspNetCore.Mvc;
-
     /// <summary>
     /// Sample showing Dapr integration with controller.
     /// </summary>

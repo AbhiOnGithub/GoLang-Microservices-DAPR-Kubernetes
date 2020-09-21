@@ -1,8 +1,9 @@
-﻿using Accounting.Models;
+﻿using System;
+using System.Threading.Tasks;
+using Accounting.Models;
 using Dapr;
 using Dapr.Client;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace Accounting.Controllers
 {
@@ -10,7 +11,7 @@ namespace Accounting.Controllers
     /// Sample showing Dapr integration with controller.
     /// </summary>
     [ApiController]
-    public class AccountController : ControllerBase
+    public class CustomerController : ControllerBase
     {
         /// <summary>
         /// State store name.

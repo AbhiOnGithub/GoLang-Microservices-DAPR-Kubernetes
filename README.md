@@ -12,12 +12,11 @@ Repository to learn about writing Microservices in GoLang & DotNET and running t
 7) Kubernetes
 8) Azure Kubernetes Service (AKS)
 9) Azure Container Registry (ACR)
-10) Basic Concepts of Azure
-
+10) Basic Concepts of Azure (Resource Groups, VNets, VM Scale Sets, RBAC , Storage, Redis, Cosmos)
 
 ## Index
 
-1) Installation Steps of DAPR and Kubernetes (AKS) 
+1) Installation Steps of DAPR and Kubernetes (AKS)
 [Link -> 1-InstallationSteps.md](https://github.com/AbhiOnGithub/GoLang-Microservices-DAPR-Kubernetes/blob/main/1-InstallationSteps.md)
 
 2) Writing a Simple **ASP.NET** Web App and run it on Kubernetes (AKS) using DAPR

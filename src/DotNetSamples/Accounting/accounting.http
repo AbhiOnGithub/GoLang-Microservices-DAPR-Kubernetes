@@ -1,6 +1,42 @@
+@hostname = http://127.0.0.1:5000/api
+
+###
+
+//Get Customer by Id
+
+GET {{hostname}}/customer/1
+Content-Type: application/json
+
+###
+
+//Add New Customer
+
+POST {{hostname}}/customer
+Content-Type: application/json
+
+{ "id": "1", "name": "Abhishek Gupta" , "address":"Bangalore, India" , "phone": "432545"  }
+
+###
+
+//Update Customer
+
+PUT {{hostname}}/customer
+Content-Type: application/json
+
+{ "id": "1", "name": "Abhishek Kumar Gupta" , "address":"Delhi, India" , "phone": "25234524"  }
+
+###
+
+//Delete a Customer
+
+DELETE  {{hostname}}/customer/1
+Content-Type: application/json
+
+###
+
 //Deposit Money
 
-POST http://127.0.0.1:5000/deposit
+POST {{hostname}}/transaction/deposit
 Content-Type: application/json
 
 { "id": "17", "amount": 12 }
@@ -9,7 +45,7 @@ Content-Type: application/json
 
 //Withdraw Money
 
-POST http://127.0.0.1:5000/withdraw
+POST {{hostname}}/transaction/withdraw
 Content-Type: application/json
 
 { "id": "17", "amount": 5 }
@@ -18,4 +54,4 @@ Content-Type: application/json
 
 //View Balance
 
-GET http://127.0.0.1:5000/17
+GET {{hostname}}/transaction/checkbalance/17

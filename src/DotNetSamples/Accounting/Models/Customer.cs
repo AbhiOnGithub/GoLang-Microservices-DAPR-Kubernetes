@@ -11,6 +11,8 @@ namespace Accounting.Models
 
         public List<Account> Accounts { get; set; }
 
+        public string Name { get; set; }
+
         public string Address { get; set; }
 
         public string Phone { get; set; }

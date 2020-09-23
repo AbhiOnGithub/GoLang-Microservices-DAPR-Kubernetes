@@ -43,10 +43,16 @@ namespace Accounting.Controllers
         public async Task<ActionResult<Account>> Deposit(Transaction transaction, [FromServices] DaprClient daprClient)
         {
             var state = await daprClient.GetStateEntryAsync<Account>(StoreName, transaction.Id);
-            state.Value ??= new Account() { Id = transaction.Id, };
-            state.Value.Balance += transaction.Amount;
-            await state.SaveAsync();
-            return state.Value;
+            if (state ==null || state.Value == null)
+            {
+                return this.BadRequest($"Account with Id {transaction.Id} doesn't exists");
+            }
+            else
+            {
+                state.Value.Balance += transaction.Amount;
+                await state.SaveAsync();
+                return state.Value;
+            }
         }
 
         /// <summary>
@@ -61,15 +67,16 @@ namespace Accounting.Controllers
         public async Task<ActionResult<Account>> Withdraw(Transaction transaction, [FromServices] DaprClient daprClient)
         {
             var state = await daprClient.GetStateEntryAsync<Account>(StoreName, transaction.Id);
-
-            if (state.Value == null)
+            if (state ==null || state.Value == null)
             {
-                return this.NotFound();
+                return this.BadRequest($"Account with Id {transaction.Id} doesn't exists");
             }
-
-            state.Value.Balance -= transaction.Amount;
-            await state.SaveAsync();
-            return state.Value;
+            else
+            {
+                state.Value.Balance -= transaction.Amount;
+                await state.SaveAsync();
+                return state.Value;
+            }
         }
     }
 }

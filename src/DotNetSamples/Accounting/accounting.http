@@ -4,7 +4,7 @@
 
 //Get Customer by Id
 
-GET {{hostname}}/customer/1
+GET {{hostname}}/customer/c1
 Content-Type: application/json
 
 ###
@@ -14,7 +14,16 @@ Content-Type: application/json
 POST {{hostname}}/customer
 Content-Type: application/json
 
-{ "id": "1", "name": "Abhishek Gupta" , "address":"Bangalore, India" , "phone": "432545"  }
+{ "id": "c1", "name": "Abhishek Gupta" , "address":"Bangalore, India" , "phone": "432545"  }
+
+###
+
+//Add Account of a Customer
+
+POST {{hostname}}/account
+Content-Type: application/json
+
+{ "id": "c1"}
 
 ###
 
@@ -23,13 +32,13 @@ Content-Type: application/json
 PUT {{hostname}}/customer
 Content-Type: application/json
 
-{ "id": "1", "name": "Abhishek Kumar Gupta" , "address":"Delhi, India" , "phone": "25234524"  }
+{ "id": "c1", "name": "Abhishek Kumar Gupta" , "address":"Delhi, India" , "phone": "25234524"  }
 
 ###
 
 //Delete a Customer
 
-DELETE  {{hostname}}/customer/1
+DELETE  {{hostname}}/customer/c1
 Content-Type: application/json
 
 ###
@@ -39,7 +48,7 @@ Content-Type: application/json
 POST {{hostname}}/transaction/deposit
 Content-Type: application/json
 
-{ "id": "17", "amount": 12 }
+{ "id": "ac-0-c1", "amount": 12 }
 
 ###
 
@@ -48,10 +57,10 @@ Content-Type: application/json
 POST {{hostname}}/transaction/withdraw
 Content-Type: application/json
 
-{ "id": "17", "amount": 5 }
+{ "id": "acc-0-1", "amount": 5 }
 
 ###
 
 //View Balance
 
-GET {{hostname}}/transaction/checkbalance/17
+GET {{hostname}}/transaction/checkbalance/acc-0-1

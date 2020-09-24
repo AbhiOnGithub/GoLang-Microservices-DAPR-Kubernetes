@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/DotNetSample/Accounting.csproj",
+                "${workspaceFolder}/src/DotNetSamples/Accounting/Accounting.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/src/DotNetSample/Accounting.csproj",
+                "${workspaceFolder}/src/DotNetSamples/Accounting/Accounting.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -32,11 +32,23 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/src/DotNetSample/Accounting.csproj",
+                "${workspaceFolder}/src/DotNetSamples/Accounting/Accounting.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "appId": "accounting",
+            "appPort": 5000,
+            "label": "daprd-debug",
+            "type": "daprd",
+            "dependsOn": "build"
+        },
+        {
+            "appId": "accounting",
+            "label": "daprd-down",
+            "type": "daprd-down"
         }
     ]
 }

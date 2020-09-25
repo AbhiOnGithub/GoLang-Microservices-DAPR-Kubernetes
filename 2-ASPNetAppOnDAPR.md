@@ -375,3 +375,17 @@ dapr list
 ```
 
 <img src="images/DotNetDAPR/1-DAPRList.PNG" />
+
+<hr/>
+
+9) You can also run DAPR Dashboard for monitoring (Learn more about DAPR Dashboard here <https://github.com/dapr/dashboard> )
+
+```cmd
+dapr dashboard
+```
+
+<img src="images/DAPR-Dashboard-Cmd.png">
+
+Now Open http://localhost:8080 to see DAPR Dashboard
+
+<img src="images/DAPR-Dashboard.png">

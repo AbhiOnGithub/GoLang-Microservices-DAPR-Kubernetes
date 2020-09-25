@@ -27,7 +27,7 @@ As per DAPR's official Documentation :
 * Event-driven architectures and state handling are complicated making them difficult to scale.
 * Many runtimes only target specific infrastructure platforms with limited code portability across clouds and edge.
 
-### What we can achive **with** DAPR
+### What we can achieve **with** DAPR
 
 * Dapr enables developers using any language or framework to easily write microservices, providing industry best practices to solve distributed systems problems.
 * Dapr provides consistency and portability through open APIs and extensible components that are community-driven.
@@ -35,6 +35,16 @@ As per DAPR's official Documentation :
 * Dapr is platform agnostic and runs on any infrastructure, including public clouds and edge devices with its open APIs.
 
 Read More about DAPR here <https://github.com/dapr/docs>
+
+<hr/>
+
+### We will also see how we can do some Monitoring through DAPR Dashboard
+
+Dapr Dashboard provides information about Dapr applications, components, configurations, and control plane services. Users can view metadata, manifests and deployment files, actors, logs, and more on both Kubernetes and self-hosted platforms.
+
+<img src="images/DAPR-Dashboard.png">
+
+Read More about DAPR Dashboard here <https://github.com/dapr/dashboard>
 
 <hr/>
 

@@ -28,8 +28,8 @@ Repository to learn about writing Microservices in GoLang & DotNET and running t
 4) Learning Basic Concepts of Docker ✔️
 [Link -> 4-BasicConceptsOfDocker.md](https://github.com/AbhiOnGithub/GoLang-Microservices-DAPR-Kubernetes/blob/main/4-BasicConcetsOfDocker.md)
 
-5) Learning Basic Concepts of Kubernetes (AKS) 🚧
+5) Learning Basic Concepts of Kubernetes (via AKS) 🚧
 [Link -> 5-BasicConceptsOfKubernetes.md](https://github.com/AbhiOnGithub/GoLang-Microservices-DAPR-Kubernetes/blob/main/5-BasicConceptsOfKubernetes.md)
 
-6) Learning Advance Concepts of Kubernetes (AKS) 🚧
+6) Learning Advance Concepts of Kubernetes (via AKS) 🚧
 [Link -> 6-AdvanceConceptsOfKubernetes.md](https://github.com/AbhiOnGithub/GoLang-Microservices-DAPR-Kubernetes/blob/main/6-AdvanceConceptsOfKubernetes.md)

@@ -1,7 +1,9 @@
 # Learn about Writing GoLang and DotNet Microservices and running them using DAPR on Kubernetes (AKS)
-Repository to learn about writing Microservices in GoLang & DotNET and running them on Kubernetes using DAPR
+Repository to learn about writing Microservices in GoLang & DotNET and running them as Docker Containers on Kubernetes using DAPR
 
-## We will be learning and using following languages,frameworks and technologies.
+<img src="images/Technologies.png" />
+
+## We will be learning and using following languages,frameworks and technologies
 
 1) C# and ASP.NET
 2) GoLang

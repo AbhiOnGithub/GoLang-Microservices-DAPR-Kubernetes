@@ -4,7 +4,7 @@
 
 //Get Customer by Id
 
-GET {{hostname}}/customer/c1
+GET {{hostname}}/customer/c2
 Content-Type: application/json
 
 ###
@@ -14,7 +14,7 @@ Content-Type: application/json
 POST {{hostname}}/customer
 Content-Type: application/json
 
-{ "id": "c1", "name": "Abhishek Gupta" , "address":"Bangalore, India" , "phone": "432545"  }
+{ "id": "c2", "name": "Abhishek Gupta" , "address":"Bangalore, India" , "phone": "432545"  }
 
 ###
 
@@ -23,7 +23,7 @@ Content-Type: application/json
 POST {{hostname}}/account
 Content-Type: application/json
 
-{ "id": "c1"}
+{ "id": "c2"}
 
 ###
 

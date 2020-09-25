@@ -16,6 +16,28 @@ Repository to learn about writing Microservices in GoLang & DotNET and running t
 9) Azure Container Registry (ACR)
 10) Basic Concepts of Azure (Resource Groups, VNets, VM Scale Sets, RBAC , Storage, Redis, Cosmos)
 
+<hr/>
+
+### Difficulties **without** DAPR
+
+As per DAPR's official Documentation :
+
+* Hard to incrementally migrate from existing code to a microservices architecture.
+* Many programming model runtimes have narrow language support and tightly controlled feature sets.
+* Event-driven architectures and state handling are complicated making them difficult to scale.
+* Many runtimes only target specific infrastructure platforms with limited code portability across clouds and edge.
+
+### What we can achive **with** DAPR
+
+* Dapr enables developers using any language or framework to easily write microservices, providing industry best practices to solve distributed systems problems.
+* Dapr provides consistency and portability through open APIs and extensible components that are community-driven.
+* Dapr handles state, resource bindings and pub/sub messaging, which enable event-driven, resilient architectures that scale.
+* Dapr is platform agnostic and runs on any infrastructure, including public clouds and edge devices with its open APIs.
+
+Read More about DAPR here <https://github.com/dapr/docs>
+
+<hr/>
+
 ## Index
 
 1) Installation Steps of DAPR and Kubernetes (AKS) ✔️
